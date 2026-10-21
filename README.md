@@ -140,8 +140,9 @@ curl -X POST http://localhost:5005/webhooks/rest/webhook \
 
 ## Rasa 侧本轮修复（并入仓库时实测发现）
 
-这份 Rasa 工程此前从未成功训练过：原始目录里那份 `models/20260223-195100-*.tar.gz`（未入库）是 Rasa starter 的原样产物，
-内嵌 domain 只有 7 个英文意图，完全没有导诊逻辑。真正跑一遍 `rasa data validate` / `rasa train` 才暴露出下面五处缺陷：
+这份 Rasa 工程训练过，但只有 2026-02-23 19:51 那一次，产出的是 `language: en`、domain 内只有 7 个英文意图的
+starter 模型；`domain.yml` / `data/nlu.yml` 的导诊内容是 31 分钟后（20:22）才加进去的，此后再没重训过——
+而带着这份导诊数据重训会直接失败，原因见下表。真正跑 `rasa data validate` / `rasa train` 才把缺陷暴露出来：
 
 | 缺陷 | 后果 | 处理 |
 | --- | --- | --- |
