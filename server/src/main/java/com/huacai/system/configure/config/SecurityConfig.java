@@ -107,18 +107,14 @@ public class SecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 // 注解标记允许匿名访问的url
                 .authorizeHttpRequests(requests -> {
-                    // 1. 放行配置文件中指定的URL
+                    // 1. 放行配置文件中指定的URL（@Anonymous 注解标记）
                     permitAllUrl.getUrls().forEach(url -> requests.requestMatchers(url).permitAll());
 
-                    // ✅ 2. 【核心修复】放行所有AI聊天接口（公开访问）
-                    requests.requestMatchers("/ai/chat/**").permitAll();
-
-                    // 3. 保留原有登录/注册等规则（/ai/chat/sse 已被上一行覆盖，保留无害）
-                    requests.requestMatchers("/login", "/register", "/captchaImage", "/ai/chat/sse").permitAll()
+                    // 2. 登录/注册/验证码；AI 聊天接口需登录，不再整棵子树匿名放行
+                    requests.requestMatchers("/login", "/register", "/captchaImage").permitAll()
                             // 静态资源，可匿名访问
                             .requestMatchers(HttpMethod.GET, "/", "/*.html", "/**.html", "/**.css", "/**.js", "/profile/**").permitAll()
-                            .requestMatchers("/druid/**").permitAll()
-                            // 除上面外的所有请求全部需要鉴权认证
+                            // 除上面外的所有请求全部需要鉴权认证（含 /druid/**，监控台另需自身口令）
                             .anyRequest().authenticated();
                 })
                 // 添加Logout filter

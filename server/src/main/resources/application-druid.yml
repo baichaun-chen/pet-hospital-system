@@ -4,8 +4,9 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/pet-hospital?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
-    username: root
-    password: ${MYSQL_PASSWORD:123456}
+    username: ${MYSQL_USERNAME:root}
+    # 口令必须由环境变量提供，仓库内不保留默认值；本地开发可放到被 gitignore 的 application-local.yml
+    password: ${MYSQL_PASSWORD}
     druid:
       # 主库数据源配置
       master:
@@ -33,10 +34,11 @@ spring:
       web-stat-filter:
         enabled: true
       stat-view-servlet:
-        enabled: true
+        # 监控台默认关闭。需要时设 DRUID_MONITOR_ENABLED=true，并同时覆盖 USER/PASSWORD 两个环境变量
+        enabled: ${DRUID_MONITOR_ENABLED:false}
         url-pattern: /druid/*
-        login-username: ${DRUID_MONITOR_USER:huacai}
-        login-password: ${DRUID_MONITOR_PASSWORD:123456}
+        login-username: ${DRUID_MONITOR_USER:changeme}
+        login-password: ${DRUID_MONITOR_PASSWORD:changeme}
     filter:
       stat:
         enabled: true
@@ -46,4 +48,5 @@ spring:
         merge-sql: true
       wall:
         config:
-          multi-statement-allow: true
+          # 禁止堆叠语句，避免任一处 SQL 注入被放大成多语句执行
+          multi-statement-allow: false

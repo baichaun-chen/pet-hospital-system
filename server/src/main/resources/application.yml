@@ -70,8 +70,9 @@ spring:
 token:
   # 令牌自定义标识
   header: Authorization
-  # 令牌密钥
-  secret: ${TOKEN_SECRET:abcdefghijklmnopqrstuvwxyz}
+  # 令牌密钥：必须由环境变量 TOKEN_SECRET 提供（HS512 建议不少于 64 字符随机串）。
+  # 故意不设默认值——缺失时启动即失败，避免用公开密钥签发可伪造的 token。
+  secret: ${TOKEN_SECRET}
   # 令牌有效期（默认300分钟）
   expireTime: 300
 
