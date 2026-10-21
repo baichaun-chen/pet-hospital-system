@@ -1,0 +1,7 @@
+# Rasa 训练与测试产物不入库：
+# models/ 是 rasa train 的输出（约 23 MB），.rasa/ 是训练指纹缓存，results/ 是 rasa test 的报告，均可再生。
+models/
+.rasa/
+results/
+__pycache__/
+*.pyc

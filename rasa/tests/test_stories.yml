@@ -1,0 +1,67 @@
+#### 导诊流程的故事测试。
+#### 运行：先 `rasa run actions`（5055），再执行 `rasa test core -s tests/test_stories.yml --endpoints endpoints.yml`。
+#### 实体用 Markdown 内联写法（[狗](pet_type)）标在 user 文本里：
+#### 这样故事才会带上实体事件，slot 被填充，依赖 slot 的导诊规则才会触发，
+#### 否则最后一步会预测成 action_default_fallback。
+#### 故事只断言预测到的 action；推荐哪位医生由 action_recommend_doctor 内部决定，
+#### 那一段要靠 /webhooks/rest/webhook 的端到端验证（见仓库 README）。
+
+stories:
+- story: 中文导诊 狗
+  steps:
+  - user: |
+      你好
+    intent: greet
+  - action: utter_ask_pet_type
+  - user: |
+      我的宠物是[狗](pet_type)
+    intent: inform_pet_type
+  - action: utter_ask_symptom
+  - user: |
+      [呕吐](symptom)
+    intent: inform_symptom
+  - action: action_recommend_doctor
+
+- story: 中文导诊 猫
+  steps:
+  - user: |
+      在吗
+    intent: greet
+  - action: utter_ask_pet_type
+  - user: |
+      [猫](pet_type)
+    intent: inform_pet_type
+  - action: utter_ask_symptom
+  - user: |
+      [发烧](symptom)
+    intent: inform_symptom
+  - action: action_recommend_doctor
+
+- story: 中文导诊 非支持种类也走推荐 Action
+  steps:
+  - user: |
+      您好
+    intent: greet
+  - action: utter_ask_pet_type
+  - user: |
+      [兔子](pet_type)
+    intent: inform_pet_type
+  - action: utter_ask_symptom
+  - user: |
+      [不吃东西](symptom)
+    intent: inform_symptom
+  - action: action_recommend_doctor
+
+- story: 告别规则随时生效
+  steps:
+  - user: |
+      再见
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: 质疑是否机器人
+  steps:
+  - user: |
+      are you a bot?
+    intent: bot_challenge
+  - action: utter_iamabot

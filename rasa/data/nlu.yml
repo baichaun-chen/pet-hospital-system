@@ -1,0 +1,135 @@
+# data/nlu.yml
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - 你好
+    - 您好
+    - 喂
+    - 在吗
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - 再见
+    - 拜拜
+    - 谢谢，不用了
+    - 不用了
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - 是的
+    - 对
+    - 没错
+    - 好的
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - 不是
+    - 不对
+    - 不用
+    - 不需要
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+# === 新增导诊意图 ===
+- intent: inform_pet_type
+  examples: |
+    - 我的宠物是[狗](pet_type)
+    - 是[猫](pet_type)
+    - [狗](pet_type)
+    - [猫](pet_type)
+    - 家里养的是[狗](pet_type)
+    - 宠物是[猫](pet_type)
+    - 一只[狗](pet_type)
+    - 有只[猫](pet_type)
+    - [兔子](pet_type)
+
+- intent: inform_symptom
+  examples: |
+    - 它[呕吐](symptom)
+    - [发烧](symptom)
+    - [不吃东西](symptom)
+    - [拉肚子](symptom)
+    - [精神不好](symptom)
+    - [咳嗽](symptom)
+    - 症状是[呕吐](symptom)
+    - 出现了[发烧](symptom)
+    - 一直[不吃东西](symptom)
+    - [抽搐](symptom)
+    - [大出血](symptom)

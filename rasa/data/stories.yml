@@ -1,0 +1,32 @@
+# data/stories.yml
+version: "3.1"
+
+# 原 Rasa starter 的 happy path / sad path 1 / sad path 2 三条故事已移除：
+# 它们把 greet 接到 utter_greet，与下面「greet -> utter_ask_pet_type」的导诊规则
+# 直接冲突，RulePolicy 会报 InvalidRule 并让 rasa train 无法完成。
+stories:
+- story: triage dog
+  steps:
+    - intent: greet
+    - action: utter_ask_pet_type
+    - intent: inform_pet_type
+      entities:
+        - pet_type: "狗"
+    - action: utter_ask_symptom
+    - intent: inform_symptom
+      entities:
+        - symptom: "呕吐"
+    - action: action_recommend_doctor
+
+- story: triage cat
+  steps:
+    - intent: greet
+    - action: utter_ask_pet_type
+    - intent: inform_pet_type
+      entities:
+        - pet_type: "猫"
+    - action: utter_ask_symptom
+    - intent: inform_symptom
+      entities:
+        - symptom: "发烧"
+    - action: action_recommend_doctor

@@ -1,0 +1,5 @@
+# 实测环境：Python 3.10.19（Rasa 3.5 不支持 3.11+）
+# jieba 必须通过 extra 引入：pip 只装 rasa 不会带 jieba，
+# 而 config.yml 用的 JiebaTokenizer 依赖它。
+rasa[jieba]==3.5.2
+rasa-sdk==3.5.1

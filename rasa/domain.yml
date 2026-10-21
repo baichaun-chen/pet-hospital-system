@@ -1,0 +1,65 @@
+# domain.yml
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - inform_pet_type
+  - inform_symptom
+
+entities:
+  - pet_type
+  - symptom
+
+slots:
+  pet_type:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: pet_type
+  symptom:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: symptom
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_did_that_help:
+    - text: "Did that help you?"
+  utter_happy:
+    - text: "Great, carry on!"
+  utter_goodbye:
+    - text: "Bye"
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  # === 新增中文导诊回复 ===
+  utter_ask_pet_type:
+    - text: "您好！我是宠物诊所导诊助手，请问您的宠物是什么种类？（例如：狗、猫）"
+  utter_ask_symptom:
+    - text: "明白了！请问您的宠物有什么症状？（例如：呕吐、发烧、不吃东西）"
+  utter_recommend_chen:
+    - text: "根据您的描述，建议您挂 **陈医生** 的号。陈医生是全能型兽医，可以处理各类宠物问题。"
+  utter_recommend_zhang:
+    - text: "根据您的描述，建议您挂 **张医生** 的号。张医生专长犬科疾病。"
+  utter_recommend_li:
+    - text: "根据您的描述，建议您挂 **李医生** 的号。李医生专长猫科疾病。"
+  utter_out_of_scope:
+    - text: "抱歉，我目前只能帮助狗或猫的导诊。请说明宠物种类和症状。"
+
+actions:
+  - action_recommend_doctor
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

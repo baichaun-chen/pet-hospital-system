@@ -1,0 +1,39 @@
+# data/rules.yml
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+    - intent: bot_challenge
+    - action: utter_iamabot
+
+# === 新增导诊规则 ===
+- rule: Start triage after greeting (Chinese)
+  steps:
+    - intent: greet
+    - action: utter_ask_pet_type
+
+- rule: After pet type is given, ask for symptom
+  condition:
+    - slot_was_set:
+        - pet_type: null
+  steps:
+    - intent: inform_pet_type
+    - action: utter_ask_symptom
+
+- rule: After symptom is given, recommend doctor
+  condition:
+    - slot_was_set:
+        # text slot 的 slot_was_set 不支持 ["狗","猫"] 这种列表取值，那样写规则永远不匹配；
+        # 这里只要 pet_type 已被填充即可触发，具体分诊由 action_recommend_doctor 决定
+        # （狗 -> 张医生，猫 -> 李医生，其他 -> 陈医生）。
+        - pet_type
+  steps:
+    - intent: inform_symptom
+    - action: action_recommend_doctor
