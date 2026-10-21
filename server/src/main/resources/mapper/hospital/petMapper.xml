@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huacai.hospital.mapper.PetMapper">
+
+    <resultMap type="Pet" id="PetResult">
+        <result property="petId"    column="pet_id"    />
+        <result property="userId"    column="user_id"    />
+        <result property="name"    column="name"    />
+        <result property="species"    column="species"    />
+        <result property="breed"    column="breed"    />
+        <result property="birthDate"    column="birth_date"    />
+        <result property="weight"    column="weight"    />
+        <result property="allergy"    column="allergy"    />
+        <result property="avatar"    column="avatar"    />
+        <result property="createTime"    column="create_time"    />
+    </resultMap>
+
+    <sql id="selectPetVo">
+        select pet_id, user_id, name, species, breed, birth_date, weight, allergy, avatar, create_time from pet
+    </sql>
+
+    <select id="selectPetList" parameterType="Pet" resultMap="PetResult">
+        <include refid="selectPetVo"/>
+        <where>
+            <if test="userId != null "> and user_id = #{userId}</if>
+            <if test="name != null  and name != ''"> and name like concat('%', #{name}, '%')</if>
+            <if test="species != null  and species != ''"> and species = #{species}</if>
+            <if test="breed != null  and breed != ''"> and breed = #{breed}</if>
+            <if test="birthDate != null "> and birth_date = #{birthDate}</if>
+            <if test="weight != null "> and weight = #{weight}</if>
+            <if test="allergy != null  and allergy != ''"> and allergy = #{allergy}</if>
+            <if test="avatar != null  and avatar != ''"> and avatar = #{avatar}</if>
+        </where>
+    </select>
+
+    <select id="selectPetByPetId" parameterType="Long" resultMap="PetResult">
+        <include refid="selectPetVo"/>
+        where pet_id = #{petId}
+    </select>
+
+    <insert id="insertPet" parameterType="Pet" useGeneratedKeys="true" keyProperty="petId">
+        insert into pet
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userId != null">user_id,</if>
+            <if test="name != null and name != ''">name,</if>
+            <if test="species != null">species,</if>
+            <if test="breed != null">breed,</if>
+            <if test="birthDate != null">birth_date,</if>
+            <if test="weight != null">weight,</if>
+            <if test="allergy != null">allergy,</if>
+            <if test="avatar != null">avatar,</if>
+            <if test="createTime != null">create_time,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="userId != null">#{userId},</if>
+            <if test="name != null and name != ''">#{name},</if>
+            <if test="species != null">#{species},</if>
+            <if test="breed != null">#{breed},</if>
+            <if test="birthDate != null">#{birthDate},</if>
+            <if test="weight != null">#{weight},</if>
+            <if test="allergy != null">#{allergy},</if>
+            <if test="avatar != null">#{avatar},</if>
+            <if test="createTime != null">#{createTime},</if>
+        </trim>
+    </insert>
+
+    <update id="updatePet" parameterType="Pet">
+        update pet
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="name != null and name != ''">name = #{name},</if>
+            <if test="species != null">species = #{species},</if>
+            <if test="breed != null">breed = #{breed},</if>
+            <if test="birthDate != null">birth_date = #{birthDate},</if>
+            <if test="weight != null">weight = #{weight},</if>
+            <if test="allergy != null">allergy = #{allergy},</if>
+            <if test="avatar != null">avatar = #{avatar},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+        </trim>
+        where pet_id = #{petId}
+    </update>
+
+    <delete id="deletePetByPetId" parameterType="Long">
+        delete from pet where pet_id = #{petId}
+    </delete>
+
+    <delete id="deletePetByPetIds" parameterType="String">
+        delete from pet where pet_id in
+        <foreach item="petId" collection="array" open="(" separator="," close=")">
+            #{petId}
+        </foreach>
+    </delete>
+</mapper>

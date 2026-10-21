@@ -1,0 +1,2004 @@
+卷 Data 的文件夹 PATH 列表
+卷序列号为 2E54-3459
+D:.
+|   .gitignore
+|   App.vue
+|   config.js
+|   index.html
+|   main.js
+|   manifest.json
+|   package-lock.json
+|   package.json
+|   pages.json
+|   permission.js
+|   uni.scss
+|   uniapp_structure.txt
+|   vite.config.js
+|   
++---.vscode
+|       launch.json
+|       
++---api
+|   |   login.js
+|   |   menu.js
+|   |   
+|   \---system
+|       |   config.js
+|       |   user.js
+|       |   
+|       \---dict
+|               data.js
+|               
++---components
+|   +---dict-tag
+|   |       dict-tag.vue
+|   |       
+|   +---file-upload
+|   |       file-upload.vue
+|   |       
+|   +---image-preview
+|   |       image-preview.vue
+|   |       
+|   +---image-upload
+|   |       image-upload.vue
+|   |       
+|   +---svg-icon
+|   |       svg-icon.vue
+|   |       
+|   +---xy-checkbox
+|   |       xy-checkbox.vue
+|   |       
+|   +---xy-drawer-tree-select
+|   |       xy-drawer-tree-select.vue
+|   |       
+|   +---xy-editor
+|   |       iconfont.css
+|   |       xy-editor.vue
+|   |       
+|   +---xy-popup
+|   |       xy-popup.vue
+|   |       
+|   +---xy-select
+|   |       xy-select.vue
+|   |       
+|   +---xy-switch
+|   |       xy-switch.vue
+|   |       
+|   \---xy-tree-select
+|           xy-tree-select.vue
+|           
++---directive
+|   |   index.js
+|   |   
+|   \---common
+|           copyText.js
+|           
++---pages
+|   |   index.vue
+|   |   login.vue
+|   |   register.vue
+|   |   
+|   +---api
+|   |   +---hospital
+|   |   |       banner.js
+|   |   |       chat.js
+|   |   |       doctor.js
+|   |   |       knowledge.js
+|   |   |       reservation.js
+|   |   |       vaccine.js
+|   |   |       
+|   |   \---system
+|   |           user.js
+|   |           
+|   +---chat
+|   |       index.vue
+|   |       
+|   +---common
+|   |   +---popup
+|   |   |       index.vue
+|   |   |       
+|   |   +---textview
+|   |   |       index.vue
+|   |   |       
+|   |   \---webview
+|   |           index.vue
+|   |           
+|   +---knowledge
+|   |       detail.vue
+|   |       index.vue
+|   |       
+|   +---mine
+|   |   |   index.vue
+|   |   |   
+|   |   +---avatar
+|   |   |       index.vue
+|   |   |       
+|   |   +---info
+|   |   |       edit.vue
+|   |   |       index.vue
+|   |   |       
+|   |   +---pwd
+|   |   |       index.vue
+|   |   |       
+|   |   \---setting
+|   |           index.vue
+|   |           
+|   +---records
+|   |       detail.vue
+|   |       index.vue
+|   |       
+|   +---reservation
+|   |       index.vue
+|   |       
+|   \---vaccine
+|           index.vue
+|           
++---plugins
+|       auth.js
+|       index.js
+|       modal.js
+|       tab.js
+|       
++---static
+|   |   favicon.ico
+|   |   index.html
+|   |   logo.png
+|   |   logo200.png
+|   |   
+|   +---font
+|   |       iconfont.css
+|   |       iconfont.ttf
+|   |       
+|   +---huacaiFont
+|   |       demo.css
+|   |       demo_index.html
+|   |       iconfont.css
+|   |       iconfont.js
+|   |       iconfont.json
+|   |       iconfont.ttf
+|   |       iconfont.woff
+|   |       iconfont.woff2
+|   |       
+|   +---icons
+|   |   \---svg
+|   |           404.svg
+|   |           add-location.svg
+|   |           aim.svg
+|   |           alarm-clock.svg
+|   |           apple.svg
+|   |           arrow-down-bold.svg
+|   |           arrow-down.svg
+|   |           arrow-left-bold.svg
+|   |           arrow-left.svg
+|   |           arrow-right-bold.svg
+|   |           arrow-right.svg
+|   |           arrow-up-bold.svg
+|   |           arrow-up.svg
+|   |           avatar.svg
+|   |           back.svg
+|   |           baseball.svg
+|   |           basketball.svg
+|   |           bell-filled.svg
+|   |           bell.svg
+|   |           bicycle.svg
+|   |           bottom-left.svg
+|   |           bottom-right.svg
+|   |           bottom.svg
+|   |           bowl.svg
+|   |           box.svg
+|   |           briefcase.svg
+|   |           brush-filled.svg
+|   |           brush.svg
+|   |           bug.svg
+|   |           build.svg
+|   |           burger.svg
+|   |           button.svg
+|   |           calendar.svg
+|   |           camera-filled.svg
+|   |           camera.svg
+|   |           caret-bottom.svg
+|   |           caret-left.svg
+|   |           caret-right.svg
+|   |           caret-top.svg
+|   |           cascader.svg
+|   |           cellphone.svg
+|   |           chart.svg
+|   |           chat-dot-round.svg
+|   |           chat-dot-square.svg
+|   |           chat-line-round.svg
+|   |           chat-line-square.svg
+|   |           chat-round.svg
+|   |           chat-square.svg
+|   |           check.svg
+|   |           checkbox.svg
+|   |           checked.svg
+|   |           cherry.svg
+|   |           chicken.svg
+|   |           chrome-filled.svg
+|   |           circle-check-filled.svg
+|   |           circle-check.svg
+|   |           circle-close-filled.svg
+|   |           circle-close.svg
+|   |           circle-plus-filled.svg
+|   |           circle-plus.svg
+|   |           client.svg
+|   |           clipboard.svg
+|   |           clock.svg
+|   |           close-bold.svg
+|   |           close.svg
+|   |           cloudy.svg
+|   |           code.svg
+|   |           coffee-cup.svg
+|   |           coffee.svg
+|   |           coin.svg
+|   |           cold-drink.svg
+|   |           collection-tag.svg
+|   |           collection.svg
+|   |           color.svg
+|   |           comment.svg
+|   |           compass.svg
+|   |           component.svg
+|   |           connection.svg
+|   |           coordinate.svg
+|   |           copy-document.svg
+|   |           cpu.svg
+|   |           credit-card.svg
+|   |           crop.svg
+|   |           d-arrow-left.svg
+|   |           d-arrow-right.svg
+|   |           d-caret.svg
+|   |           dashboard.svg
+|   |           data-analysis.svg
+|   |           data-board.svg
+|   |           data-line.svg
+|   |           date-range.svg
+|   |           date.svg
+|   |           delete-filled.svg
+|   |           delete-location.svg
+|   |           delete.svg
+|   |           dessert.svg
+|   |           dict.svg
+|   |           discount.svg
+|   |           dish-dot.svg
+|   |           dish.svg
+|   |           document-add.svg
+|   |           document-checked.svg
+|   |           document-copy.svg
+|   |           document-delete.svg
+|   |           document-remove.svg
+|   |           document.svg
+|   |           documentation.svg
+|   |           download.svg
+|   |           drag.svg
+|   |           drizzling.svg
+|   |           druid.svg
+|   |           edit-pen.svg
+|   |           edit.svg
+|   |           education.svg
+|   |           eleme-filled.svg
+|   |           eleme.svg
+|   |           element-plus.svg
+|   |           email.svg
+|   |           example.svg
+|   |           excel.svg
+|   |           exit-fullscreen.svg
+|   |           expand.svg
+|   |           eye-open.svg
+|   |           eye.svg
+|   |           failed.svg
+|   |           female.svg
+|   |           files.svg
+|   |           film.svg
+|   |           filter.svg
+|   |           finished.svg
+|   |           first-aid-kit.svg
+|   |           flag.svg
+|   |           fold.svg
+|   |           folder-add.svg
+|   |           folder-checked.svg
+|   |           folder-delete.svg
+|   |           folder-opened.svg
+|   |           folder-remove.svg
+|   |           folder.svg
+|   |           food.svg
+|   |           football.svg
+|   |           fork-spoon.svg
+|   |           form.svg
+|   |           fries.svg
+|   |           full-screen.svg
+|   |           fullscreen.svg
+|   |           github.svg
+|   |           goblet-full.svg
+|   |           goblet-square-full.svg
+|   |           goblet-square.svg
+|   |           goblet.svg
+|   |           gold-medal.svg
+|   |           goods-filled.svg
+|   |           goods.svg
+|   |           grape.svg
+|   |           grid.svg
+|   |           guide.svg
+|   |           handbag.svg
+|   |           headset.svg
+|   |           help-filled.svg
+|   |           help.svg
+|   |           hide.svg
+|   |           histogram.svg
+|   |           home-filled.svg
+|   |           hot-water.svg
+|   |           house.svg
+|   |           ice-cream-round.svg
+|   |           ice-cream-square.svg
+|   |           ice-cream.svg
+|   |           ice-drink.svg
+|   |           ice-tea.svg
+|   |           icon.svg
+|   |           info-filled.svg
+|   |           input.svg
+|   |           international.svg
+|   |           iphone.svg
+|   |           job.svg
+|   |           key.svg
+|   |           knife-fork.svg
+|   |           language.svg
+|   |           lightning.svg
+|   |           link.svg
+|   |           list.svg
+|   |           loading.svg
+|   |           location-filled.svg
+|   |           location-information.svg
+|   |           location.svg
+|   |           lock.svg
+|   |           log.svg
+|   |           logininfor.svg
+|   |           lollipop.svg
+|   |           magic-stick.svg
+|   |           magnet.svg
+|   |           male.svg
+|   |           management.svg
+|   |           map-location.svg
+|   |           medal.svg
+|   |           memo.svg
+|   |           menu.svg
+|   |           message-box.svg
+|   |           message.svg
+|   |           mic.svg
+|   |           microphone.svg
+|   |           milk-tea.svg
+|   |           minus.svg
+|   |           money.svg
+|   |           monitor.svg
+|   |           moon-night.svg
+|   |           moon.svg
+|   |           more-filled.svg
+|   |           more.svg
+|   |           mostly-cloudy.svg
+|   |           mouse.svg
+|   |           mug.svg
+|   |           mute-notification.svg
+|   |           mute.svg
+|   |           nacos.svg
+|   |           nested.svg
+|   |           no-smoking.svg
+|   |           notebook.svg
+|   |           notification.svg
+|   |           number.svg
+|   |           odometer.svg
+|   |           office-building.svg
+|   |           online.svg
+|   |           open.svg
+|   |           operation.svg
+|   |           opportunity.svg
+|   |           orange.svg
+|   |           paperclip.svg
+|   |           partly-cloudy.svg
+|   |           password.svg
+|   |           pdf.svg
+|   |           pear.svg
+|   |           people.svg
+|   |           peoples.svg
+|   |           phone-filled.svg
+|   |           phone.svg
+|   |           picture-filled.svg
+|   |           picture-rounded.svg
+|   |           picture.svg
+|   |           pie-chart.svg
+|   |           place.svg
+|   |           platform.svg
+|   |           plus.svg
+|   |           pointer.svg
+|   |           position.svg
+|   |           post.svg
+|   |           postcard.svg
+|   |           pouring.svg
+|   |           present.svg
+|   |           price-tag.svg
+|   |           printer.svg
+|   |           promotion.svg
+|   |           qq.svg
+|   |           quartz-watch.svg
+|   |           question-filled.svg
+|   |           question.svg
+|   |           radio.svg
+|   |           rank.svg
+|   |           rate.svg
+|   |           reading-lamp.svg
+|   |           reading.svg
+|   |           redis-list.svg
+|   |           redis.svg
+|   |           refresh-left.svg
+|   |           refresh-right.svg
+|   |           refresh.svg
+|   |           refrigerator.svg
+|   |           remove-filled.svg
+|   |           remove.svg
+|   |           right.svg
+|   |           row.svg
+|   |           scale-to-original.svg
+|   |           school.svg
+|   |           scissor.svg
+|   |           search.svg
+|   |           select.svg
+|   |           sell.svg
+|   |           semi-select.svg
+|   |           sentinel.svg
+|   |           server.svg
+|   |           service.svg
+|   |           set-up.svg
+|   |           setting.svg
+|   |           share.svg
+|   |           ship.svg
+|   |           shop.svg
+|   |           shopping-bag.svg
+|   |           shopping-cart-full.svg
+|   |           shopping-cart.svg
+|   |           shopping-trolley.svg
+|   |           shopping.svg
+|   |           size.svg
+|   |           skill.svg
+|   |           slider.svg
+|   |           smoking.svg
+|   |           soccer.svg
+|   |           sold-out.svg
+|   |           sort-down.svg
+|   |           sort-up.svg
+|   |           sort.svg
+|   |           stamp.svg
+|   |           star-filled.svg
+|   |           star.svg
+|   |           stopwatch.svg
+|   |           success-filled.svg
+|   |           sugar.svg
+|   |           suitcase-line.svg
+|   |           suitcase.svg
+|   |           sunny.svg
+|   |           sunrise.svg
+|   |           sunset.svg
+|   |           swagger.svg
+|   |           switch-button.svg
+|   |           switch-filled.svg
+|   |           switch.svg
+|   |           system.svg
+|   |           tab.svg
+|   |           table.svg
+|   |           takeaway-box.svg
+|   |           textarea.svg
+|   |           theme.svg
+|   |           ticket.svg
+|   |           tickets.svg
+|   |           time-range.svg
+|   |           time.svg
+|   |           timer.svg
+|   |           toilet-paper.svg
+|   |           tool.svg
+|   |           tools.svg
+|   |           top-left.svg
+|   |           top-right.svg
+|   |           top.svg
+|   |           tree-table.svg
+|   |           tree.svg
+|   |           trend-charts.svg
+|   |           trophy-base.svg
+|   |           trophy.svg
+|   |           turn-off.svg
+|   |           umbrella.svg
+|   |           unlock.svg
+|   |           upload-filled.svg
+|   |           upload.svg
+|   |           user-filled.svg
+|   |           user.svg
+|   |           validCode.svg
+|   |           van.svg
+|   |           video-camera-filled.svg
+|   |           video-camera.svg
+|   |           video-pause.svg
+|   |           video-play.svg
+|   |           view.svg
+|   |           wallet-filled.svg
+|   |           wallet.svg
+|   |           warn-triangle-filled.svg
+|   |           warning-filled.svg
+|   |           warning.svg
+|   |           watch.svg
+|   |           watermelon.svg
+|   |           wechat.svg
+|   |           wind-power.svg
+|   |           zip.svg
+|   |           zoom-in.svg
+|   |           zoom-out.svg
+|   |           
+|   +---images
+|   |   |   profile.jpg
+|   |   |   
+|   |   \---tabbar
+|   |           home.png
+|   |           home_.png
+|   |           mine.png
+|   |           mine_.png
+|   |           records.png
+|   |           records_.png
+|   |           work.png
+|   |           work_.png
+|   |           
+|   \---scss
+|       |   colorui.css
+|       |   global.scss
+|       |   index.scss
+|       |   
+|       \---work
+|               form.scss
+|               index.scss
+|               
++---store
+|   |   index.js
+|   |   
+|   \---modules
+|           dict.js
+|           modal.js
+|           user.js
+|           
++---uni_modules
+|   +---uni-badge
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-badge
+|   |               uni-badge.vue
+|   |               
+|   +---uni-breadcrumb
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       +---uni-breadcrumb
+|   |       |       uni-breadcrumb.vue
+|   |       |       
+|   |       \---uni-breadcrumb-item
+|   |               uni-breadcrumb-item.vue
+|   |               
+|   +---uni-calendar
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-calendar
+|   |           |   calendar.js
+|   |           |   uni-calendar-item.vue
+|   |           |   uni-calendar.vue
+|   |           |   util.js
+|   |           |   
+|   |           \---i18n
+|   |                   en.json
+|   |                   index.js
+|   |                   zh-Hans.json
+|   |                   zh-Hant.json
+|   |                   
+|   +---uni-card
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-card
+|   |               uni-card.vue
+|   |               
+|   +---uni-collapse
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       +---uni-collapse
+|   |       |       uni-collapse.vue
+|   |       |       
+|   |       \---uni-collapse-item
+|   |               uni-collapse-item.vue
+|   |               
+|   +---uni-combox
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-combox
+|   |               uni-combox.vue
+|   |               
+|   +---uni-countdown
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-countdown
+|   |           |   uni-countdown.vue
+|   |           |   
+|   |           \---i18n
+|   |                   en.json
+|   |                   index.js
+|   |                   zh-Hans.json
+|   |                   zh-Hant.json
+|   |                   
+|   +---uni-data-checkbox
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-data-checkbox
+|   |               clientdb.js
+|   |               uni-data-checkbox.vue
+|   |               
+|   +---uni-data-picker
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       +---uni-data-picker
+|   |       |       keypress.js
+|   |       |       uni-data-picker.uvue
+|   |       |       uni-data-picker.vue
+|   |       |       
+|   |       \---uni-data-pickerview
+|   |               uni-data-picker.js
+|   |               uni-data-picker.uts
+|   |               uni-data-pickerview.css
+|   |               uni-data-pickerview.uvue
+|   |               uni-data-pickerview.vue
+|   |               
+|   +---uni-data-select
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-data-select
+|   |               uni-data-select.vue
+|   |               
+|   +---uni-dateformat
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-dateformat
+|   |               date-format.js
+|   |               uni-dateformat.vue
+|   |               
+|   +---uni-datetime-picker
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-datetime-picker
+|   |           |   calendar-item.vue
+|   |           |   calendar.vue
+|   |           |   time-picker.vue
+|   |           |   uni-datetime-picker.vue
+|   |           |   util.js
+|   |           |   
+|   |           \---i18n
+|   |                   en.json
+|   |                   index.js
+|   |                   zh-Hans.json
+|   |                   zh-Hant.json
+|   |                   
+|   +---uni-drawer
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-drawer
+|   |               keypress.js
+|   |               uni-drawer.vue
+|   |               
+|   +---uni-easyinput
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-easyinput
+|   |               common.js
+|   |               uni-easyinput.vue
+|   |               
+|   +---uni-fab
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-fab
+|   |               uni-fab.vue
+|   |               
+|   +---uni-fav
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-fav
+|   |           |   uni-fav.vue
+|   |           |   
+|   |           \---i18n
+|   |                   en.json
+|   |                   index.js
+|   |                   zh-Hans.json
+|   |                   zh-Hant.json
+|   |                   
+|   +---uni-file-picker
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-file-picker
+|   |               choose-and-upload-file.js
+|   |               uni-file-picker.vue
+|   |               upload-file.vue
+|   |               upload-image.vue
+|   |               utils.js
+|   |               
+|   +---uni-forms
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       +---uni-forms
+|   |       |       uni-forms.vue
+|   |       |       utils.js
+|   |       |       validate.js
+|   |       |       
+|   |       \---uni-forms-item
+|   |               uni-forms-item.vue
+|   |               
+|   +---uni-goods-nav
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-goods-nav
+|   |           |   uni-goods-nav.vue
+|   |           |   
+|   |           \---i18n
+|   |                   en.json
+|   |                   index.js
+|   |                   zh-Hans.json
+|   |                   zh-Hant.json
+|   |                   
+|   +---uni-grid
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       +---uni-grid
+|   |       |       uni-grid.vue
+|   |       |       
+|   |       \---uni-grid-item
+|   |               uni-grid-item.vue
+|   |               
+|   +---uni-group
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-group
+|   |               uni-group.vue
+|   |               
+|   +---uni-icons
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-icons
+|   |               icons.js
+|   |               uni-icons.uvue
+|   |               uni-icons.vue
+|   |               uniicons.css
+|   |               uniicons.ttf
+|   |               uniicons_file.ts
+|   |               uniicons_file_vue.js
+|   |               
+|   +---uni-indexed-list
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-indexed-list
+|   |               uni-indexed-list-item.vue
+|   |               uni-indexed-list.vue
+|   |               
+|   +---uni-link
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-link
+|   |               uni-link.vue
+|   |               
+|   +---uni-list
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       +---uni-list
+|   |       |       uni-list.vue
+|   |       |       uni-refresh.vue
+|   |       |       uni-refresh.wxs
+|   |       |       
+|   |       +---uni-list-ad
+|   |       |       uni-list-ad.vue
+|   |       |       
+|   |       +---uni-list-chat
+|   |       |       uni-list-chat.scss
+|   |       |       uni-list-chat.vue
+|   |       |       
+|   |       \---uni-list-item
+|   |               uni-list-item.vue
+|   |               
+|   +---uni-load-more
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-load-more
+|   |           |   uni-load-more.vue
+|   |           |   
+|   |           \---i18n
+|   |                   en.json
+|   |                   index.js
+|   |                   zh-Hans.json
+|   |                   zh-Hant.json
+|   |                   
+|   +---uni-nav-bar
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-nav-bar
+|   |               uni-nav-bar.vue
+|   |               uni-status-bar.vue
+|   |               
+|   +---uni-notice-bar
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-notice-bar
+|   |               uni-notice-bar.vue
+|   |               
+|   +---uni-number-box
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-number-box
+|   |               uni-number-box.vue
+|   |               
+|   +---uni-pagination
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-pagination
+|   |           |   uni-pagination.vue
+|   |           |   
+|   |           \---i18n
+|   |                   en.json
+|   |                   es.json
+|   |                   fr.json
+|   |                   index.js
+|   |                   zh-Hans.json
+|   |                   zh-Hant.json
+|   |                   
+|   +---uni-popup
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       +---uni-popup
+|   |       |   |   keypress.js
+|   |       |   |   popup.js
+|   |       |   |   uni-popup.uvue
+|   |       |   |   uni-popup.vue
+|   |       |   |   
+|   |       |   \---i18n
+|   |       |           en.json
+|   |       |           index.js
+|   |       |           zh-Hans.json
+|   |       |           zh-Hant.json
+|   |       |           
+|   |       +---uni-popup-dialog
+|   |       |       keypress.js
+|   |       |       uni-popup-dialog.vue
+|   |       |       
+|   |       +---uni-popup-message
+|   |       |       uni-popup-message.vue
+|   |       |       
+|   |       \---uni-popup-share
+|   |               uni-popup-share.vue
+|   |               
+|   +---uni-rate
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-rate
+|   |               uni-rate.vue
+|   |               
+|   +---uni-row
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       +---uni-col
+|   |       |       uni-col.vue
+|   |       |       
+|   |       \---uni-row
+|   |               uni-row.vue
+|   |               
+|   +---uni-scss
+|   |   |   changelog.md
+|   |   |   index.scss
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   theme.scss
+|   |   |   variables.scss
+|   |   |   
+|   |   \---styles
+|   |       |   index.scss
+|   |       |   
+|   |       +---setting
+|   |       |       _border.scss
+|   |       |       _color.scss
+|   |       |       _radius.scss
+|   |       |       _space.scss
+|   |       |       _styles.scss
+|   |       |       _text.scss
+|   |       |       _variables.scss
+|   |       |       
+|   |       \---tools
+|   |               functions.scss
+|   |               
+|   +---uni-search-bar
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-search-bar
+|   |           |   uni-search-bar.vue
+|   |           |   
+|   |           \---i18n
+|   |                   en.json
+|   |                   index.js
+|   |                   zh-Hans.json
+|   |                   zh-Hant.json
+|   |                   
+|   +---uni-section
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-section
+|   |               uni-section.vue
+|   |               
+|   +---uni-segmented-control
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-segmented-control
+|   |               uni-segmented-control.vue
+|   |               
+|   +---uni-steps
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-steps
+|   |               uni-steps.vue
+|   |               
+|   +---uni-swipe-action
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       +---uni-swipe-action
+|   |       |       uni-swipe-action.vue
+|   |       |       
+|   |       \---uni-swipe-action-item
+|   |               bindingx.js
+|   |               isPC.js
+|   |               mpalipay.js
+|   |               mpother.js
+|   |               mpwxs.js
+|   |               render.js
+|   |               uni-swipe-action-item.vue
+|   |               wx.wxs
+|   |               
+|   +---uni-swiper-dot
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-swiper-dot
+|   |               uni-swiper-dot.vue
+|   |               
+|   +---uni-table
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   +---components
+|   |   |   +---uni-table
+|   |   |   |       uni-table.vue
+|   |   |   |       
+|   |   |   +---uni-tbody
+|   |   |   |       uni-tbody.vue
+|   |   |   |       
+|   |   |   +---uni-td
+|   |   |   |       uni-td.vue
+|   |   |   |       
+|   |   |   +---uni-th
+|   |   |   |       filter-dropdown.vue
+|   |   |   |       uni-th.vue
+|   |   |   |       
+|   |   |   +---uni-thead
+|   |   |   |       uni-thead.vue
+|   |   |   |       
+|   |   |   \---uni-tr
+|   |   |           table-checkbox.vue
+|   |   |           uni-tr.vue
+|   |   |           
+|   |   \---i18n
+|   |           en.json
+|   |           es.json
+|   |           fr.json
+|   |           index.js
+|   |           zh-Hans.json
+|   |           zh-Hant.json
+|   |           
+|   +---uni-tag
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-tag
+|   |               uni-tag.vue
+|   |               
+|   +---uni-test
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-test
+|   |               uni-test.vue
+|   |               
+|   +---uni-title
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-title
+|   |               uni-title.vue
+|   |               
+|   +---uni-tooltip
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-tooltip
+|   |               uni-tooltip.vue
+|   |               
+|   +---uni-transition
+|   |   |   changelog.md
+|   |   |   package.json
+|   |   |   readme.md
+|   |   |   
+|   |   \---components
+|   |       \---uni-transition
+|   |               createAnimation.js
+|   |               uni-transition.vue
+|   |               
+|   \---uni-ui
+|       |   changelog.md
+|       |   package.json
+|       |   readme.md
+|       |   
+|       \---components
+|           \---uni-ui
+|                   uni-ui.vue
+|                   
++---unpackage
+|   \---dist
+|       +---cache
+|       |   \---.vite
+|       |       \---deps
+|       |               package.json
+|       |               _metadata.json
+|       |               
+|       \---dev
+|           +---.sourcemap
+|           |   \---mp-weixin
+|           |       |   app.js.map
+|           |       |   config.js.map
+|           |       |   permission.js.map
+|           |       |   
+|           |       +---api
+|           |       |   |   login.js.map
+|           |       |   |   
+|           |       |   \---system
+|           |       |       |   user.js.map
+|           |       |       |   
+|           |       |       \---dict
+|           |       |               data.js.map
+|           |       |               
+|           |       +---common
+|           |       |       assets.js.map
+|           |       |       vendor.js.map
+|           |       |       
+|           |       +---components
+|           |       |   \---xy-popup
+|           |       |           xy-popup.js.map
+|           |       |           
+|           |       +---directive
+|           |       |   |   index.js.map
+|           |       |   |   
+|           |       |   \---common
+|           |       |           copyText.js.map
+|           |       |           
+|           |       +---pages
+|           |       |   |   index.js.map
+|           |       |   |   login.js.map
+|           |       |   |   register.js.map
+|           |       |   |   
+|           |       |   +---api
+|           |       |   |   +---hospital
+|           |       |   |   |       banner.js.map
+|           |       |   |   |       chat.js.map
+|           |       |   |   |       doctor.js.map
+|           |       |   |   |       knowledge.js.map
+|           |       |   |   |       reservation.js.map
+|           |       |   |   |       vaccine.js.map
+|           |       |   |   |       
+|           |       |   |   \---system
+|           |       |   |           user.js.map
+|           |       |   |           
+|           |       |   +---chat
+|           |       |   |       index.js.map
+|           |       |   |       
+|           |       |   +---common
+|           |       |   |   \---popup
+|           |       |   |           index.js.map
+|           |       |   |           
+|           |       |   +---knowledge
+|           |       |   |       detail.js.map
+|           |       |   |       index.js.map
+|           |       |   |       
+|           |       |   +---mine
+|           |       |   |   |   index.js.map
+|           |       |   |   |   
+|           |       |   |   +---avatar
+|           |       |   |   |       index.js.map
+|           |       |   |   |       
+|           |       |   |   +---info
+|           |       |   |   |       edit.js.map
+|           |       |   |   |       index.js.map
+|           |       |   |   |       
+|           |       |   |   +---pwd
+|           |       |   |   |       index.js.map
+|           |       |   |   |       
+|           |       |   |   \---setting
+|           |       |   |           index.js.map
+|           |       |   |           
+|           |       |   +---records
+|           |       |   |       detail.js.map
+|           |       |   |       index.js.map
+|           |       |   |       
+|           |       |   +---reservation
+|           |       |   |       index.js.map
+|           |       |   |       
+|           |       |   \---vaccine
+|           |       |           index.js.map
+|           |       |           
+|           |       +---plugins
+|           |       |       auth.js.map
+|           |       |       index.js.map
+|           |       |       modal.js.map
+|           |       |       tab.js.map
+|           |       |       
+|           |       +---store
+|           |       |   |   index.js.map
+|           |       |   |   
+|           |       |   \---modules
+|           |       |           dict.js.map
+|           |       |           modal.js.map
+|           |       |           user.js.map
+|           |       |           
+|           |       +---uni_modules
+|           |       |   +---uni-data-checkbox
+|           |       |   |   \---components
+|           |       |   |       \---uni-data-checkbox
+|           |       |   |               uni-data-checkbox.js.map
+|           |       |   |               
+|           |       |   +---uni-easyinput
+|           |       |   |   \---components
+|           |       |   |       \---uni-easyinput
+|           |       |   |               uni-easyinput.js.map
+|           |       |   |               
+|           |       |   +---uni-forms
+|           |       |   |   \---components
+|           |       |   |       \---uni-forms
+|           |       |   |               uni-forms.js.map
+|           |       |   |               utils.js.map
+|           |       |   |               validate.js.map
+|           |       |   |               
+|           |       |   +---uni-icons
+|           |       |   |   \---components
+|           |       |   |       \---uni-icons
+|           |       |   |               uni-icons.js.map
+|           |       |   |               uniicons_file_vue.js.map
+|           |       |   |               
+|           |       |   +---uni-load-more
+|           |       |   |   \---components
+|           |       |   |       \---uni-load-more
+|           |       |   |           |   uni-load-more.js.map
+|           |       |   |           |   
+|           |       |   |           \---i18n
+|           |       |   |                   index.js.map
+|           |       |   |                   
+|           |       |   +---uni-popup
+|           |       |   |   \---components
+|           |       |   |       +---uni-popup
+|           |       |   |       |   |   popup.js.map
+|           |       |   |       |   |   uni-popup.js.map
+|           |       |   |       |   |   
+|           |       |   |       |   \---i18n
+|           |       |   |       |           index.js.map
+|           |       |   |       |           
+|           |       |   |       \---uni-popup-dialog
+|           |       |   |               uni-popup-dialog.js.map
+|           |       |   |               
+|           |       |   \---uni-transition
+|           |       |       \---components
+|           |       |           \---uni-transition
+|           |       |                   createAnimation.js.map
+|           |       |                   uni-transition.js.map
+|           |       |                   
+|           |       \---utils
+|           |           |   auth.js.map
+|           |           |   common.js.map
+|           |           |   constant.js.map
+|           |           |   dict.js.map
+|           |           |   errorCode.js.map
+|           |           |   huacai.js.map
+|           |           |   request.js.map
+|           |           |   storage.js.map
+|           |           |   upload.js.map
+|           |           |   
+|           |           \---formData
+|           |                   formData.js.map
+|           |                   mimeMap.js.map
+|           |                   
+|           \---mp-weixin
+|               |   app.js
+|               |   app.json
+|               |   app.wxss
+|               |   config.js
+|               |   permission.js
+|               |   project.config.json
+|               |   project.private.config.json
+|               |   
+|               +---api
+|               |   |   login.js
+|               |   |   
+|               |   \---system
+|               |       |   user.js
+|               |       |   
+|               |       \---dict
+|               |               data.js
+|               |               
+|               +---common
+|               |       assets.js
+|               |       vendor.js
+|               |       
+|               +---components
+|               |   \---xy-popup
+|               |           xy-popup.js
+|               |           xy-popup.json
+|               |           xy-popup.wxml
+|               |           xy-popup.wxss
+|               |           
+|               +---directive
+|               |   |   index.js
+|               |   |   
+|               |   \---common
+|               |           copyText.js
+|               |           
+|               +---pages
+|               |   |   index.js
+|               |   |   index.json
+|               |   |   index.wxml
+|               |   |   index.wxss
+|               |   |   login.js
+|               |   |   login.json
+|               |   |   login.wxml
+|               |   |   login.wxss
+|               |   |   register.js
+|               |   |   register.json
+|               |   |   register.wxml
+|               |   |   register.wxss
+|               |   |   
+|               |   +---api
+|               |   |   +---hospital
+|               |   |   |       banner.js
+|               |   |   |       chat.js
+|               |   |   |       doctor.js
+|               |   |   |       knowledge.js
+|               |   |   |       reservation.js
+|               |   |   |       vaccine.js
+|               |   |   |       
+|               |   |   \---system
+|               |   |           user.js
+|               |   |           
+|               |   +---chat
+|               |   |       index.js
+|               |   |       index.json
+|               |   |       index.wxml
+|               |   |       index.wxss
+|               |   |       
+|               |   +---common
+|               |   |   \---popup
+|               |   |           index.js
+|               |   |           index.json
+|               |   |           index.wxml
+|               |   |           
+|               |   +---knowledge
+|               |   |       detail.js
+|               |   |       detail.json
+|               |   |       detail.wxml
+|               |   |       detail.wxss
+|               |   |       index.js
+|               |   |       index.json
+|               |   |       index.wxml
+|               |   |       index.wxss
+|               |   |       
+|               |   +---mine
+|               |   |   |   index.js
+|               |   |   |   index.json
+|               |   |   |   index.wxml
+|               |   |   |   index.wxss
+|               |   |   |   
+|               |   |   +---avatar
+|               |   |   |       index.js
+|               |   |   |       index.json
+|               |   |   |       index.wxml
+|               |   |   |       index.wxss
+|               |   |   |       
+|               |   |   +---info
+|               |   |   |       edit.js
+|               |   |   |       edit.json
+|               |   |   |       edit.wxml
+|               |   |   |       edit.wxss
+|               |   |   |       index.js
+|               |   |   |       index.json
+|               |   |   |       index.wxml
+|               |   |   |       index.wxss
+|               |   |   |       
+|               |   |   +---pwd
+|               |   |   |       index.js
+|               |   |   |       index.json
+|               |   |   |       index.wxml
+|               |   |   |       index.wxss
+|               |   |   |       
+|               |   |   \---setting
+|               |   |           index.js
+|               |   |           index.json
+|               |   |           index.wxml
+|               |   |           index.wxss
+|               |   |           
+|               |   +---records
+|               |   |       detail.js
+|               |   |       detail.json
+|               |   |       detail.wxml
+|               |   |       detail.wxss
+|               |   |       index.js
+|               |   |       index.json
+|               |   |       index.wxml
+|               |   |       index.wxss
+|               |   |       
+|               |   +---reservation
+|               |   |       index.js
+|               |   |       index.json
+|               |   |       index.wxml
+|               |   |       index.wxss
+|               |   |       
+|               |   \---vaccine
+|               |           index.js
+|               |           index.json
+|               |           index.wxml
+|               |           index.wxss
+|               |           
+|               +---plugins
+|               |       auth.js
+|               |       index.js
+|               |       modal.js
+|               |       tab.js
+|               |       
+|               +---static
+|               |   |   favicon.ico
+|               |   |   index.html
+|               |   |   logo.png
+|               |   |   logo200.png
+|               |   |   
+|               |   +---font
+|               |   |       iconfont.css
+|               |   |       iconfont.ttf
+|               |   |       
+|               |   +---huacaiFont
+|               |   |       demo.css
+|               |   |       demo_index.html
+|               |   |       iconfont.css
+|               |   |       iconfont.js
+|               |   |       iconfont.json
+|               |   |       iconfont.ttf
+|               |   |       iconfont.woff
+|               |   |       iconfont.woff2
+|               |   |       
+|               |   +---icons
+|               |   |   \---svg
+|               |   |           404.svg
+|               |   |           add-location.svg
+|               |   |           aim.svg
+|               |   |           alarm-clock.svg
+|               |   |           apple.svg
+|               |   |           arrow-down-bold.svg
+|               |   |           arrow-down.svg
+|               |   |           arrow-left-bold.svg
+|               |   |           arrow-left.svg
+|               |   |           arrow-right-bold.svg
+|               |   |           arrow-right.svg
+|               |   |           arrow-up-bold.svg
+|               |   |           arrow-up.svg
+|               |   |           avatar.svg
+|               |   |           back.svg
+|               |   |           baseball.svg
+|               |   |           basketball.svg
+|               |   |           bell-filled.svg
+|               |   |           bell.svg
+|               |   |           bicycle.svg
+|               |   |           bottom-left.svg
+|               |   |           bottom-right.svg
+|               |   |           bottom.svg
+|               |   |           bowl.svg
+|               |   |           box.svg
+|               |   |           briefcase.svg
+|               |   |           brush-filled.svg
+|               |   |           brush.svg
+|               |   |           bug.svg
+|               |   |           build.svg
+|               |   |           burger.svg
+|               |   |           button.svg
+|               |   |           calendar.svg
+|               |   |           camera-filled.svg
+|               |   |           camera.svg
+|               |   |           caret-bottom.svg
+|               |   |           caret-left.svg
+|               |   |           caret-right.svg
+|               |   |           caret-top.svg
+|               |   |           cascader.svg
+|               |   |           cellphone.svg
+|               |   |           chart.svg
+|               |   |           chat-dot-round.svg
+|               |   |           chat-dot-square.svg
+|               |   |           chat-line-round.svg
+|               |   |           chat-line-square.svg
+|               |   |           chat-round.svg
+|               |   |           chat-square.svg
+|               |   |           check.svg
+|               |   |           checkbox.svg
+|               |   |           checked.svg
+|               |   |           cherry.svg
+|               |   |           chicken.svg
+|               |   |           chrome-filled.svg
+|               |   |           circle-check-filled.svg
+|               |   |           circle-check.svg
+|               |   |           circle-close-filled.svg
+|               |   |           circle-close.svg
+|               |   |           circle-plus-filled.svg
+|               |   |           circle-plus.svg
+|               |   |           client.svg
+|               |   |           clipboard.svg
+|               |   |           clock.svg
+|               |   |           close-bold.svg
+|               |   |           close.svg
+|               |   |           cloudy.svg
+|               |   |           code.svg
+|               |   |           coffee-cup.svg
+|               |   |           coffee.svg
+|               |   |           coin.svg
+|               |   |           cold-drink.svg
+|               |   |           collection-tag.svg
+|               |   |           collection.svg
+|               |   |           color.svg
+|               |   |           comment.svg
+|               |   |           compass.svg
+|               |   |           component.svg
+|               |   |           connection.svg
+|               |   |           coordinate.svg
+|               |   |           copy-document.svg
+|               |   |           cpu.svg
+|               |   |           credit-card.svg
+|               |   |           crop.svg
+|               |   |           d-arrow-left.svg
+|               |   |           d-arrow-right.svg
+|               |   |           d-caret.svg
+|               |   |           dashboard.svg
+|               |   |           data-analysis.svg
+|               |   |           data-board.svg
+|               |   |           data-line.svg
+|               |   |           date-range.svg
+|               |   |           date.svg
+|               |   |           delete-filled.svg
+|               |   |           delete-location.svg
+|               |   |           delete.svg
+|               |   |           dessert.svg
+|               |   |           dict.svg
+|               |   |           discount.svg
+|               |   |           dish-dot.svg
+|               |   |           dish.svg
+|               |   |           document-add.svg
+|               |   |           document-checked.svg
+|               |   |           document-copy.svg
+|               |   |           document-delete.svg
+|               |   |           document-remove.svg
+|               |   |           document.svg
+|               |   |           documentation.svg
+|               |   |           download.svg
+|               |   |           drag.svg
+|               |   |           drizzling.svg
+|               |   |           druid.svg
+|               |   |           edit-pen.svg
+|               |   |           edit.svg
+|               |   |           education.svg
+|               |   |           eleme-filled.svg
+|               |   |           eleme.svg
+|               |   |           element-plus.svg
+|               |   |           email.svg
+|               |   |           example.svg
+|               |   |           excel.svg
+|               |   |           exit-fullscreen.svg
+|               |   |           expand.svg
+|               |   |           eye-open.svg
+|               |   |           eye.svg
+|               |   |           failed.svg
+|               |   |           female.svg
+|               |   |           files.svg
+|               |   |           film.svg
+|               |   |           filter.svg
+|               |   |           finished.svg
+|               |   |           first-aid-kit.svg
+|               |   |           flag.svg
+|               |   |           fold.svg
+|               |   |           folder-add.svg
+|               |   |           folder-checked.svg
+|               |   |           folder-delete.svg
+|               |   |           folder-opened.svg
+|               |   |           folder-remove.svg
+|               |   |           folder.svg
+|               |   |           food.svg
+|               |   |           football.svg
+|               |   |           fork-spoon.svg
+|               |   |           form.svg
+|               |   |           fries.svg
+|               |   |           full-screen.svg
+|               |   |           fullscreen.svg
+|               |   |           github.svg
+|               |   |           goblet-full.svg
+|               |   |           goblet-square-full.svg
+|               |   |           goblet-square.svg
+|               |   |           goblet.svg
+|               |   |           gold-medal.svg
+|               |   |           goods-filled.svg
+|               |   |           goods.svg
+|               |   |           grape.svg
+|               |   |           grid.svg
+|               |   |           guide.svg
+|               |   |           handbag.svg
+|               |   |           headset.svg
+|               |   |           help-filled.svg
+|               |   |           help.svg
+|               |   |           hide.svg
+|               |   |           histogram.svg
+|               |   |           home-filled.svg
+|               |   |           hot-water.svg
+|               |   |           house.svg
+|               |   |           ice-cream-round.svg
+|               |   |           ice-cream-square.svg
+|               |   |           ice-cream.svg
+|               |   |           ice-drink.svg
+|               |   |           ice-tea.svg
+|               |   |           icon.svg
+|               |   |           info-filled.svg
+|               |   |           input.svg
+|               |   |           international.svg
+|               |   |           iphone.svg
+|               |   |           job.svg
+|               |   |           key.svg
+|               |   |           knife-fork.svg
+|               |   |           language.svg
+|               |   |           lightning.svg
+|               |   |           link.svg
+|               |   |           list.svg
+|               |   |           loading.svg
+|               |   |           location-filled.svg
+|               |   |           location-information.svg
+|               |   |           location.svg
+|               |   |           lock.svg
+|               |   |           log.svg
+|               |   |           logininfor.svg
+|               |   |           lollipop.svg
+|               |   |           magic-stick.svg
+|               |   |           magnet.svg
+|               |   |           male.svg
+|               |   |           management.svg
+|               |   |           map-location.svg
+|               |   |           medal.svg
+|               |   |           memo.svg
+|               |   |           menu.svg
+|               |   |           message-box.svg
+|               |   |           message.svg
+|               |   |           mic.svg
+|               |   |           microphone.svg
+|               |   |           milk-tea.svg
+|               |   |           minus.svg
+|               |   |           money.svg
+|               |   |           monitor.svg
+|               |   |           moon-night.svg
+|               |   |           moon.svg
+|               |   |           more-filled.svg
+|               |   |           more.svg
+|               |   |           mostly-cloudy.svg
+|               |   |           mouse.svg
+|               |   |           mug.svg
+|               |   |           mute-notification.svg
+|               |   |           mute.svg
+|               |   |           nacos.svg
+|               |   |           nested.svg
+|               |   |           no-smoking.svg
+|               |   |           notebook.svg
+|               |   |           notification.svg
+|               |   |           number.svg
+|               |   |           odometer.svg
+|               |   |           office-building.svg
+|               |   |           online.svg
+|               |   |           open.svg
+|               |   |           operation.svg
+|               |   |           opportunity.svg
+|               |   |           orange.svg
+|               |   |           paperclip.svg
+|               |   |           partly-cloudy.svg
+|               |   |           password.svg
+|               |   |           pdf.svg
+|               |   |           pear.svg
+|               |   |           people.svg
+|               |   |           peoples.svg
+|               |   |           phone-filled.svg
+|               |   |           phone.svg
+|               |   |           picture-filled.svg
+|               |   |           picture-rounded.svg
+|               |   |           picture.svg
+|               |   |           pie-chart.svg
+|               |   |           place.svg
+|               |   |           platform.svg
+|               |   |           plus.svg
+|               |   |           pointer.svg
+|               |   |           position.svg
+|               |   |           post.svg
+|               |   |           postcard.svg
+|               |   |           pouring.svg
+|               |   |           present.svg
+|               |   |           price-tag.svg
+|               |   |           printer.svg
+|               |   |           promotion.svg
+|               |   |           qq.svg
+|               |   |           quartz-watch.svg
+|               |   |           question-filled.svg
+|               |   |           question.svg
+|               |   |           radio.svg
+|               |   |           rank.svg
+|               |   |           rate.svg
+|               |   |           reading-lamp.svg
+|               |   |           reading.svg
+|               |   |           redis-list.svg
+|               |   |           redis.svg
+|               |   |           refresh-left.svg
+|               |   |           refresh-right.svg
+|               |   |           refresh.svg
+|               |   |           refrigerator.svg
+|               |   |           remove-filled.svg
+|               |   |           remove.svg
+|               |   |           right.svg
+|               |   |           row.svg
+|               |   |           scale-to-original.svg
+|               |   |           school.svg
+|               |   |           scissor.svg
+|               |   |           search.svg
+|               |   |           select.svg
+|               |   |           sell.svg
+|               |   |           semi-select.svg
+|               |   |           sentinel.svg
+|               |   |           server.svg
+|               |   |           service.svg
+|               |   |           set-up.svg
+|               |   |           setting.svg
+|               |   |           share.svg
+|               |   |           ship.svg
+|               |   |           shop.svg
+|               |   |           shopping-bag.svg
+|               |   |           shopping-cart-full.svg
+|               |   |           shopping-cart.svg
+|               |   |           shopping-trolley.svg
+|               |   |           shopping.svg
+|               |   |           size.svg
+|               |   |           skill.svg
+|               |   |           slider.svg
+|               |   |           smoking.svg
+|               |   |           soccer.svg
+|               |   |           sold-out.svg
+|               |   |           sort-down.svg
+|               |   |           sort-up.svg
+|               |   |           sort.svg
+|               |   |           stamp.svg
+|               |   |           star-filled.svg
+|               |   |           star.svg
+|               |   |           stopwatch.svg
+|               |   |           success-filled.svg
+|               |   |           sugar.svg
+|               |   |           suitcase-line.svg
+|               |   |           suitcase.svg
+|               |   |           sunny.svg
+|               |   |           sunrise.svg
+|               |   |           sunset.svg
+|               |   |           swagger.svg
+|               |   |           switch-button.svg
+|               |   |           switch-filled.svg
+|               |   |           switch.svg
+|               |   |           system.svg
+|               |   |           tab.svg
+|               |   |           table.svg
+|               |   |           takeaway-box.svg
+|               |   |           textarea.svg
+|               |   |           theme.svg
+|               |   |           ticket.svg
+|               |   |           tickets.svg
+|               |   |           time-range.svg
+|               |   |           time.svg
+|               |   |           timer.svg
+|               |   |           toilet-paper.svg
+|               |   |           tool.svg
+|               |   |           tools.svg
+|               |   |           top-left.svg
+|               |   |           top-right.svg
+|               |   |           top.svg
+|               |   |           tree-table.svg
+|               |   |           tree.svg
+|               |   |           trend-charts.svg
+|               |   |           trophy-base.svg
+|               |   |           trophy.svg
+|               |   |           turn-off.svg
+|               |   |           umbrella.svg
+|               |   |           unlock.svg
+|               |   |           upload-filled.svg
+|               |   |           upload.svg
+|               |   |           user-filled.svg
+|               |   |           user.svg
+|               |   |           validCode.svg
+|               |   |           van.svg
+|               |   |           video-camera-filled.svg
+|               |   |           video-camera.svg
+|               |   |           video-pause.svg
+|               |   |           video-play.svg
+|               |   |           view.svg
+|               |   |           wallet-filled.svg
+|               |   |           wallet.svg
+|               |   |           warn-triangle-filled.svg
+|               |   |           warning-filled.svg
+|               |   |           warning.svg
+|               |   |           watch.svg
+|               |   |           watermelon.svg
+|               |   |           wechat.svg
+|               |   |           wind-power.svg
+|               |   |           zip.svg
+|               |   |           zoom-in.svg
+|               |   |           zoom-out.svg
+|               |   |           
+|               |   +---images
+|               |   |   |   profile.jpg
+|               |   |   |   
+|               |   |   \---tabbar
+|               |   |           home.png
+|               |   |           home_.png
+|               |   |           mine.png
+|               |   |           mine_.png
+|               |   |           records.png
+|               |   |           records_.png
+|               |   |           work.png
+|               |   |           work_.png
+|               |   |           
+|               |   \---scss
+|               |       |   colorui.css
+|               |       |   global.scss
+|               |       |   index.scss
+|               |       |   
+|               |       \---work
+|               |               form.scss
+|               |               index.scss
+|               |               
+|               +---store
+|               |   |   index.js
+|               |   |   
+|               |   \---modules
+|               |           dict.js
+|               |           modal.js
+|               |           user.js
+|               |           
+|               +---uni_modules
+|               |   +---uni-data-checkbox
+|               |   |   \---components
+|               |   |       \---uni-data-checkbox
+|               |   |               uni-data-checkbox.js
+|               |   |               uni-data-checkbox.json
+|               |   |               uni-data-checkbox.wxml
+|               |   |               uni-data-checkbox.wxss
+|               |   |               
+|               |   +---uni-easyinput
+|               |   |   \---components
+|               |   |       \---uni-easyinput
+|               |   |               uni-easyinput.js
+|               |   |               uni-easyinput.json
+|               |   |               uni-easyinput.wxml
+|               |   |               uni-easyinput.wxss
+|               |   |               
+|               |   +---uni-forms
+|               |   |   \---components
+|               |   |       \---uni-forms
+|               |   |               uni-forms.js
+|               |   |               uni-forms.json
+|               |   |               uni-forms.wxml
+|               |   |               uni-forms.wxss
+|               |   |               utils.js
+|               |   |               validate.js
+|               |   |               
+|               |   +---uni-icons
+|               |   |   \---components
+|               |   |       \---uni-icons
+|               |   |               uni-icons.js
+|               |   |               uni-icons.json
+|               |   |               uni-icons.wxml
+|               |   |               uni-icons.wxss
+|               |   |               uniicons_file_vue.js
+|               |   |               
+|               |   +---uni-load-more
+|               |   |   \---components
+|               |   |       \---uni-load-more
+|               |   |           |   uni-load-more.js
+|               |   |           |   uni-load-more.json
+|               |   |           |   uni-load-more.wxml
+|               |   |           |   uni-load-more.wxss
+|               |   |           |   
+|               |   |           \---i18n
+|               |   |                   index.js
+|               |   |                   
+|               |   +---uni-popup
+|               |   |   \---components
+|               |   |       +---uni-popup
+|               |   |       |   |   popup.js
+|               |   |       |   |   uni-popup.js
+|               |   |       |   |   uni-popup.json
+|               |   |       |   |   uni-popup.wxml
+|               |   |       |   |   uni-popup.wxss
+|               |   |       |   |   
+|               |   |       |   \---i18n
+|               |   |       |           index.js
+|               |   |       |           
+|               |   |       \---uni-popup-dialog
+|               |   |               uni-popup-dialog.js
+|               |   |               uni-popup-dialog.json
+|               |   |               uni-popup-dialog.wxml
+|               |   |               uni-popup-dialog.wxss
+|               |   |               
+|               |   \---uni-transition
+|               |       \---components
+|               |           \---uni-transition
+|               |                   createAnimation.js
+|               |                   uni-transition.js
+|               |                   uni-transition.json
+|               |                   uni-transition.wxml
+|               |                   
+|               \---utils
+|                   |   auth.js
+|                   |   common.js
+|                   |   constant.js
+|                   |   dict.js
+|                   |   errorCode.js
+|                   |   huacai.js
+|                   |   request.js
+|                   |   storage.js
+|                   |   upload.js
+|                   |   
+|                   \---formData
+|                           formData.js
+|                           mimeMap.js
+|                           
+\---utils
+    |   auth.js
+    |   common.js
+    |   constant.js
+    |   dict.js
+    |   errorCode.js
+    |   huacai.js
+    |   index.js
+    |   request.js
+    |   storage.js
+    |   upload.js
+    |   validate.js
+    |   
+    \---formData
+            formData.js
+            mimeMap.js
+            package.json
+            README.md
+            

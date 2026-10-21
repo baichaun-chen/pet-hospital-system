@@ -1,0 +1,24 @@
+# 依赖与构建产物
+node_modules/
+dist/
+target/
+unpackage/
+*.class
+*.jar
+*.war
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.DS_Store
+
+# 日志与本地覆盖
+logs/
+*.log
+*.local
+.env.local
+application-local.yml
+
+# 上传目录
+uploadPath/

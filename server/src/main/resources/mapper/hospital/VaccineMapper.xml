@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huacai.hospital.mapper.VaccineMapper">
+    
+    <resultMap type="Vaccine" id="VaccineResult">
+        <result property="vaccineId"    column="vaccine_id"    />
+        <result property="name"    column="name"    />
+        <result property="description"    column="description"    />
+    </resultMap>
+
+    <sql id="selectVaccineVo">
+        select vaccine_id, name, description from vaccine
+    </sql>
+
+    <select id="selectVaccineList" parameterType="Vaccine" resultMap="VaccineResult">
+        <include refid="selectVaccineVo"/>
+        <where>  
+            <if test="name != null  and name != ''"> and name like concat('%', #{name}, '%')</if>
+        </where>
+    </select>
+    
+    <select id="selectVaccineByVaccineId" parameterType="String" resultMap="VaccineResult">
+        <include refid="selectVaccineVo"/>
+        where vaccine_id = #{vaccineId}
+    </select>
+
+    <insert id="insertVaccine" parameterType="Vaccine">
+        insert into vaccine
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="vaccineId != null">vaccine_id,</if>
+            <if test="name != null and name != ''">name,</if>
+            <if test="description != null and description != ''">description,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="vaccineId != null">#{vaccineId},</if>
+            <if test="name != null and name != ''">#{name},</if>
+            <if test="description != null and description != ''">#{description},</if>
+         </trim>
+    </insert>
+
+    <update id="updateVaccine" parameterType="Vaccine">
+        update vaccine
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="name != null and name != ''">name = #{name},</if>
+            <if test="description != null and description != ''">description = #{description},</if>
+        </trim>
+        where vaccine_id = #{vaccineId}
+    </update>
+
+    <delete id="deleteVaccineByVaccineId" parameterType="String">
+        delete from vaccine where vaccine_id = #{vaccineId}
+    </delete>
+
+    <delete id="deleteVaccineByVaccineIds" parameterType="String">
+        delete from vaccine where vaccine_id in 
+        <foreach item="vaccineId" collection="array" open="(" separator="," close=")">
+            #{vaccineId}
+        </foreach>
+    </delete>
+</mapper>

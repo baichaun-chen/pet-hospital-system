@@ -1,0 +1,25 @@
+/*
+  工作台默认列表样式 进一步压缩体积
+*/
+page {
+	background-color: #ffffff;
+}
+.container {
+	width: 100%;
+	background-color: #ffffff;
+	
+	.queryForm {
+		padding-top: 36rpx;
+		padding: 15px;
+		
+		:deep(.uni-forms-item) {
+			margin-bottom: 5px;
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	.xy-btn {
+		margin: 3px;
+	}
+}

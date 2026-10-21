@@ -1,0 +1,51 @@
+{
+  "id": "5044646",
+  "name": "宠物医院小程序",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "586429",
+      "name": "在线预约",
+      "font_class": "zaixianyuyue",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "6469258",
+      "name": "law_10",
+      "font_class": "law_",
+      "unicode": "e66a",
+      "unicode_decimal": 58986
+    },
+    {
+      "icon_id": "6883217",
+      "name": "宠物圈-01",
+      "font_class": "chongwuquan-",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "8893178",
+      "name": "【住院】历史病历查询",
+      "font_class": "zhuyuanlishibinglichaxun",
+      "unicode": "e715",
+      "unicode_decimal": 59157
+    },
+    {
+      "icon_id": "15500879",
+      "name": "宠物资料",
+      "font_class": "chongwuziliao",
+      "unicode": "e69d",
+      "unicode_decimal": 59037
+    },
+    {
+      "icon_id": "30416862",
+      "name": "科室管理",
+      "font_class": "keshiguanli",
+      "unicode": "e7ab",
+      "unicode_decimal": 59307
+    }
+  ]
+}

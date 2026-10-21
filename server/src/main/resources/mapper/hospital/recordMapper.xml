@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huacai.hospital.mapper.MedicalRecordMapper">
+
+    <resultMap type="MedicalRecord" id="MedicalRecordResult">
+        <result property="recordId"    column="record_id"    />
+        <result property="reservationId"    column="reservation_id"    />
+        <result property="doctorId"    column="doctor_id"    />
+        <result property="diagnosis"    column="diagnosis"    />
+        <result property="treatment"    column="treatment"    />
+        <result property="prescription"    column="prescription"    />
+        <result property="followUpDate"    column="follow_up_date"    />
+        <result property="createTime"    column="create_time"    />
+    </resultMap>
+
+    <sql id="selectMedicalRecordVo">
+        select record_id, reservation_id, doctor_id, diagnosis, treatment, prescription, follow_up_date, create_time from medical_record
+    </sql>
+
+    <select id="selectMedicalRecordList" parameterType="MedicalRecord" resultMap="MedicalRecordResult">
+        <include refid="selectMedicalRecordVo"/>
+        <where>
+            <if test="reservationId != null "> and reservation_id = #{reservationId}</if>
+            <if test="doctorId != null "> and doctor_id = #{doctorId}</if>
+            <if test="diagnosis != null  and diagnosis != ''"> and diagnosis = #{diagnosis}</if>
+            <if test="treatment != null  and treatment != ''"> and treatment = #{treatment}</if>
+            <if test="prescription != null  and prescription != ''"> and prescription = #{prescription}</if>
+            <if test="followUpDate != null "> and follow_up_date = #{followUpDate}</if>
+        </where>
+    </select>
+
+    <select id="selectMedicalRecordByRecordId" parameterType="Long" resultMap="MedicalRecordResult">
+        <include refid="selectMedicalRecordVo"/>
+        where record_id = #{recordId}
+    </select>
+
+    <insert id="insertMedicalRecord" parameterType="MedicalRecord" useGeneratedKeys="true" keyProperty="recordId">
+        insert into medical_record
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="reservationId != null">reservation_id,</if>
+            <if test="doctorId != null">doctor_id,</if>
+            <if test="diagnosis != null">diagnosis,</if>
+            <if test="treatment != null">treatment,</if>
+            <if test="prescription != null">prescription,</if>
+            <if test="followUpDate != null">follow_up_date,</if>
+            <if test="createTime != null">create_time,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="reservationId != null">#{reservationId},</if>
+            <if test="doctorId != null">#{doctorId},</if>
+            <if test="diagnosis != null">#{diagnosis},</if>
+            <if test="treatment != null">#{treatment},</if>
+            <if test="prescription != null">#{prescription},</if>
+            <if test="followUpDate != null">#{followUpDate},</if>
+            <if test="createTime != null">#{createTime},</if>
+        </trim>
+    </insert>
+
+    <update id="updateMedicalRecord" parameterType="MedicalRecord">
+        update medical_record
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="reservationId != null">reservation_id = #{reservationId},</if>
+            <if test="doctorId != null">doctor_id = #{doctorId},</if>
+            <if test="diagnosis != null">diagnosis = #{diagnosis},</if>
+            <if test="treatment != null">treatment = #{treatment},</if>
+            <if test="prescription != null">prescription = #{prescription},</if>
+            <if test="followUpDate != null">follow_up_date = #{followUpDate},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+        </trim>
+        where record_id = #{recordId}
+    </update>
+
+    <delete id="deleteMedicalRecordByRecordId" parameterType="Long">
+        delete from medical_record where record_id = #{recordId}
+    </delete>
+
+    <delete id="deleteMedicalRecordByRecordIds" parameterType="String">
+        delete from medical_record where record_id in
+        <foreach item="recordId" collection="array" open="(" separator="," close=")">
+            #{recordId}
+        </foreach>
+    </delete>
+</mapper>

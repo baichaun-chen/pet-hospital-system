@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huacai.hospital.mapper.KnowledgeMapper">
+    
+    <resultMap type="Knowledge" id="KnowledgeResult">
+        <result property="knowledgeId"    column="knowledge_id"    />
+        <result property="title"    column="title"    />
+        <result property="content"    column="content"    />
+        <result property="createTime"    column="create_time"    />
+    </resultMap>
+
+    <sql id="selectKnowledgeVo">
+        select knowledge_id, title, content, create_time from knowledge
+    </sql>
+
+    <select id="selectKnowledgeList" parameterType="Knowledge" resultMap="KnowledgeResult">
+        <include refid="selectKnowledgeVo"/>
+        <where>  
+            <if test="title != null  and title != ''"> and title like concat('%', #{title}, '%')</if>
+        </where>
+    </select>
+    
+    <select id="selectKnowledgeByKnowledgeId" parameterType="String" resultMap="KnowledgeResult">
+        <include refid="selectKnowledgeVo"/>
+        where knowledge_id = #{knowledgeId}
+    </select>
+
+    <insert id="insertKnowledge" parameterType="Knowledge">
+        insert into knowledge
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="knowledgeId != null">knowledge_id,</if>
+            <if test="title != null and title != ''">title,</if>
+            <if test="content != null and content != ''">content,</if>
+            <if test="createTime != null">create_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="knowledgeId != null">#{knowledgeId},</if>
+            <if test="title != null and title != ''">#{title},</if>
+            <if test="content != null and content != ''">#{content},</if>
+            <if test="createTime != null">#{createTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateKnowledge" parameterType="Knowledge">
+        update knowledge
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="title != null and title != ''">title = #{title},</if>
+            <if test="content != null and content != ''">content = #{content},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+        </trim>
+        where knowledge_id = #{knowledgeId}
+    </update>
+
+    <delete id="deleteKnowledgeByKnowledgeId" parameterType="String">
+        delete from knowledge where knowledge_id = #{knowledgeId}
+    </delete>
+
+    <delete id="deleteKnowledgeByKnowledgeIds" parameterType="String">
+        delete from knowledge where knowledge_id in 
+        <foreach item="knowledgeId" collection="array" open="(" separator="," close=")">
+            #{knowledgeId}
+        </foreach>
+    </delete>
+</mapper>

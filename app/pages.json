@@ -1,0 +1,139 @@
+{
+  "pages": [
+    {
+      "path": "pages/login",
+      "style": {
+        "navigationBarTitleText": "登录"
+      }
+    },
+    {
+      "path": "pages/register",
+      "style": {
+        "navigationBarTitleText": "注册"
+      }
+    },
+    {
+      "path": "pages/index",
+      "style": {
+        "navigationBarTitleText": "丫丫宠物医院",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/mine/index",
+      "style": {
+        "navigationBarTitleText": "我的"
+      }
+    },
+    {
+      "path": "pages/mine/avatar/index",
+      "style": {
+        "navigationBarTitleText": "修改头像"
+      }
+    },
+    {
+      "path": "pages/mine/info/index",
+      "style": {
+        "navigationBarTitleText": "个人信息"
+      }
+    },
+    {
+      "path": "pages/mine/info/edit",
+      "style": {
+        "navigationBarTitleText": "编辑资料"
+      }
+    },
+    {
+      "path": "pages/mine/pwd/index",
+      "style": {
+        "navigationBarTitleText": "修改密码"
+      }
+    },
+    {
+      "path": "pages/mine/setting/index",
+      "style": {
+        "navigationBarTitleText": "应用设置"
+      }
+    },
+    {
+      "path": "pages/reservation/index",
+      "style": {
+        "navigationBarTitleText": "在线预约"
+      }
+    },
+    {
+      "path": "pages/vaccine/index",
+      "style": {
+        "navigationBarTitleText": "疫苗接种"
+      }
+    },
+    {
+      "path": "pages/records/index",
+      "style": {
+        "navigationBarTitleText": "预约记录"
+      }
+    },
+    {
+      "path": "pages/records/detail",
+      "style": {
+        "navigationBarTitleText": "预约详情"
+      }
+    },
+    {
+      "path": "pages/knowledge/index",
+      "style": {
+        "navigationBarTitleText": "养宠知识"
+      }
+    },
+    {
+      "path": "pages/knowledge/detail",
+      "style": {
+        "navigationBarTitleText": "养宠知识"
+      }
+    },
+    {
+      "path": "pages/chat/index",
+      "style": {
+        "navigationBarTitleText": "AI问诊"
+      }
+    },
+    {
+      "path": "pages/common/popup/index",
+      "style": {
+        "navigationBarTitleText": "",
+        "navigationStyle": "custom"
+      }
+    }
+  ],
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index",
+        "iconPath": "static/images/tabbar/home.png",
+        "selectedIconPath": "static/images/tabbar/home_.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/records/index",
+        "iconPath": "static/images/tabbar/records.png",
+        "selectedIconPath": "static/images/tabbar/records_.png",
+        "text": "预约记录"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "iconPath": "static/images/tabbar/mine.png",
+        "selectedIconPath": "static/images/tabbar/mine_.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "HuaCai",
+    "navigationBarBackgroundColor": "#FFFFFF"
+  }
+}

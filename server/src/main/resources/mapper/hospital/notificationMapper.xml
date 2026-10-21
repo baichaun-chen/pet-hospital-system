@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huacai.hospital.mapper.NotificationMapper">
+
+    <resultMap type="Notification" id="NotificationResult">
+        <result property="notifyId"    column="notify_id"    />
+        <result property="userId"    column="user_id"    />
+        <result property="title"    column="title"    />
+        <result property="content"    column="content"    />
+        <result property="type"    column="type"    />
+        <result property="isRead"    column="is_read"    />
+        <result property="createTime"    column="create_time"    />
+    </resultMap>
+
+    <sql id="selectNotificationVo">
+        select notify_id, user_id, title, content, type, is_read, create_time from notification
+    </sql>
+
+    <select id="selectNotificationList" parameterType="Notification" resultMap="NotificationResult">
+        <include refid="selectNotificationVo"/>
+        <where>
+            <if test="userId != null "> and user_id = #{userId}</if>
+            <if test="title != null  and title != ''"> and title = #{title}</if>
+            <if test="content != null  and content != ''"> and content = #{content}</if>
+            <if test="type != null "> and type = #{type}</if>
+            <if test="isRead != null "> and is_read = #{isRead}</if>
+        </where>
+    </select>
+
+    <select id="selectNotificationByNotifyId" parameterType="Long" resultMap="NotificationResult">
+        <include refid="selectNotificationVo"/>
+        where notify_id = #{notifyId}
+    </select>
+
+    <insert id="insertNotification" parameterType="Notification" useGeneratedKeys="true" keyProperty="notifyId">
+        insert into notification
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userId != null">user_id,</if>
+            <if test="title != null and title != ''">title,</if>
+            <if test="content != null and content != ''">content,</if>
+            <if test="type != null">type,</if>
+            <if test="isRead != null">is_read,</if>
+            <if test="createTime != null">create_time,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="userId != null">#{userId},</if>
+            <if test="title != null and title != ''">#{title},</if>
+            <if test="content != null and content != ''">#{content},</if>
+            <if test="type != null">#{type},</if>
+            <if test="isRead != null">#{isRead},</if>
+            <if test="createTime != null">#{createTime},</if>
+        </trim>
+    </insert>
+
+    <update id="updateNotification" parameterType="Notification">
+        update notification
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="title != null and title != ''">title = #{title},</if>
+            <if test="content != null and content != ''">content = #{content},</if>
+            <if test="type != null">type = #{type},</if>
+            <if test="isRead != null">is_read = #{isRead},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+        </trim>
+        where notify_id = #{notifyId}
+    </update>
+
+    <delete id="deleteNotificationByNotifyId" parameterType="Long">
+        delete from notification where notify_id = #{notifyId}
+    </delete>
+
+    <delete id="deleteNotificationByNotifyIds" parameterType="String">
+        delete from notification where notify_id in
+        <foreach item="notifyId" collection="array" open="(" separator="," close=")">
+            #{notifyId}
+        </foreach>
+    </delete>
+</mapper>

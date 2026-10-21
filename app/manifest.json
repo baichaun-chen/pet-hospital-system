@@ -1,0 +1,167 @@
+{
+    "name" : "huacai-app-vue3",
+    "appid" : "__UNI__EFB794B",
+    "description" : "",
+    "versionName" : "1.0.0",
+    "versionCode" : 100,
+    "transformPx" : false,
+    "app-plus" : {
+        /* 5+App特有相关 */
+        "usingComponents" : true,
+        "nvueCompiler" : "uni-app",
+        "nvueStyleCompiler" : "uni-app",
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        "modules" : {
+            "Barcode" : {},
+            "Camera" : {},
+            "Geolocation" : {},
+            "Record" : {},
+            "SQLite" : {},
+            "VideoPlayer" : {}
+        },
+        /* android打包配置 */
+        "permissions" : {
+            "android.permission.WRITE_EXTERNAL_STORAGE" : {
+                "desc" : "需要获取外部存储权限选择图片"
+            },
+            "android.permission.READ_EXTERNAL_STORAGE" : {
+                "desc" : "需要获取外部存储权限保存图片"
+            }
+        },
+        /* 模块配置 */
+        "distribute" : {
+            /* 应用发布信息 */
+            "android" : {
+                /* android打包配置 */
+                "permissions" : [
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\"/>"
+                ],
+                "minSdkVersion" : 21,
+                "targetSdkVersion" : 34
+            },
+            "ios" : {
+                "dSYMs" : false,
+                "privacyDescription" : {
+                    "NSPhotoLibraryUsageDescription" : "需要获取外部存储权限选择图片",
+                    "NSPhotoLibraryAddUsageDescription" : "需要获取外部存储权限保存图片",
+                    "NSCameraUsageDescription" : "上传图片需拍照"
+                }
+            },
+            /* ios打包配置 */
+            "sdkConfigs" : {
+                "ad" : {},
+                "geolocation" : {
+                    "system" : {
+                        "__platform__" : [ "ios", "android" ]
+                    }
+                },
+                "push" : {
+                    "unipush" : {
+                        "version" : "2",
+                        "offline" : true,
+                        "mi" : {}
+                    }
+                },
+                "share" : {
+                    "qq" : {
+                        "appid" : "",
+                        "UniversalLinks" : ""
+                    }
+                }
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "",
+                    "xhdpi" : "",
+                    "xxhdpi" : "",
+                    "xxxhdpi" : ""
+                },
+                "ios" : {
+                    "appstore" : "",
+                    "ipad" : {
+                        "app" : "",
+                        "app@2x" : "",
+                        "notification" : "",
+                        "notification@2x" : "",
+                        "proapp@2x" : "",
+                        "settings" : "",
+                        "settings@2x" : "",
+                        "spotlight" : "",
+                        "spotlight@2x" : ""
+                    },
+                    "iphone" : {
+                        "app@2x" : "",
+                        "app@3x" : "",
+                        "notification@2x" : "",
+                        "notification@3x" : "",
+                        "settings@2x" : "",
+                        "settings@3x" : "",
+                        "spotlight@2x" : "",
+                        "spotlight@3x" : ""
+                    }
+                }
+            }
+        },
+        "optimization" : {
+            "subPackages" : true
+        },
+        "runmode" : "liberate", // 开启分包优化后，必须配置资源释放模式
+        "nativePlugins" : {
+            "DeltaPhone-Camera" : {
+                "__plugin_info__" : {
+                    "name" : "相机插件",
+                    "description" : "相机插件，支持二指缩放调整焦距，拍照后生成正方形图片",
+                    "platforms" : "Android",
+                    "url" : "https://ext.dcloud.net.cn/plugin?id=3516",
+                    "android_package_name" : "wxy.test",
+                    "ios_bundle_id" : "",
+                    "isCloud" : true,
+                    "bought" : 1,
+                    "pid" : "3516",
+                    "parameters" : {}
+                }
+            }
+        }
+    },
+    /* SDK配置 */
+    "quickapp" : {},
+    /* 快应用特有相关 */
+    "mp-weixin" : {
+        "appid" : "",
+        "setting" : {
+            "urlCheck" : false,
+            "minified" : true,
+            "postcss" : true
+        },
+        "usingComponents" : true,
+        "lazyCodeLoading" : "requiredComponents",
+        /** 分包优化 */
+        "optimization" : {
+            "subPackages" : true //是否启用
+        }
+    },
+    "vueVersion" : "3",
+    "locale" : "zh-Hans",
+    "fallbackLocale" : "zh-Hans"
+}
